@@ -6,6 +6,9 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
 @Aspect
 @Component
 @Slf4j
@@ -13,6 +16,9 @@ public class TestLogAspect {
 
     @Pointcut("@annotation(cn.com.chenby.local.test.customizeAnnotation.annotation.TestLog)")
     private void testLog(){}
+
+    @Resource
+    HttpServletResponse repose;
 
 
     @Before("testLog()")

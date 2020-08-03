@@ -22,6 +22,7 @@
     <modules>
         <module>chenby-local-test-websocket</module>
         <module>chenby-local-test-customizeAnnotation</module>
+        <module>chenby-local-test-redis</module>
     </modules>
 
 </project>
